@@ -125,3 +125,17 @@ function executeWork(employee: Director | Teacher): string {
 // Test
 console.log(executeWork(createEmployee(200)));
 console.log(executeWork(createEmployee(1000)));
+
+// String literal type allowing only 'Math' or 'History' (instructions)
+type Subjects = 'Math' | 'History';
+
+function teachClass(todayClass: Subjects): string {
+  if (todayClass === 'Math') {
+    return 'Teaching Math';
+  } else {
+    return 'Teaching History';
+  }
+}
+
+console.log(teachClass('Math'));
+console.log(teachClass('History'));
